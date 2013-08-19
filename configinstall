@@ -5,7 +5,9 @@ for cur in google-chrome chromium; do
     cat $pluginpath/chrome-*/Custom.css > "$HOME/.config/$cur/Default/User StyleSheets/Custom.css"
 done
 
+rm -f "$HOME/.dircolors"
 ln -svf $pluginpath/dircolors/dircolors.256dark "$HOME/.dircolors"
+rm -f "$HOME/.vim/bundle/theme"
 ln -svf $pluginpath/vim "$HOME/.vim/bundle/theme"
 
 mkdir -pv "$HOME/.fonts"
