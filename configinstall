@@ -11,5 +11,5 @@ rm -f "$HOME/.vim/bundle/theme"
 ln -svf $pluginpath/vim "$HOME/.vim/bundle/theme"
 
 mkdir -pv "$HOME/.fonts"
-ln -vf "$pluginpath/Inconsolata-dz-Powerline.otf" "$HOME/.fonts"
+find fonts -iname '*.?tf' -exec cp -v {} "$HOME/.fonts" \;
 fc-cache
